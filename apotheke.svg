@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (1:1.1+202202050950+0a00cf5339)"
+   sodipodi:docname="apotheke.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5037598"
+     inkscape:cx="-14.297496"
+     inkscape:cy="257.02243"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     width="209mm" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#008080;fill-rule:evenodd;stroke-width:0.255043"
+       id="rect31"
+       width="100"
+       height="102.55299"
+       x="0.10193355"
+       y="0.058757909" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.264583"
+       id="rect235-3"
+       width="23.461548"
+       height="84.958855"
+       x="37.372169"
+       y="-92.281387"
+       transform="rotate(89.734328)" />
+    <rect
+       style="fill:#f9f9f9;stroke-width:0.264583"
+       id="rect235"
+       width="23.461548"
+       height="84.958855"
+       x="37.328419"
+       y="6.8723221" />
+  </g>
+</svg>

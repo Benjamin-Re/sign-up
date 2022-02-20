@@ -1,5 +1,6 @@
 :root {
     --right-section-height: 33%;
+    font-size: 16px;
 }
 
 body {
@@ -8,9 +9,52 @@ body {
 }
 
 .left {
-    background-color:blanchedalmond;
+    background: url(./jeremy.jpg) center;
     flex: 1 1 auto;
     max-width: 35%;
+    position: relative;
+}
+
+.left>span {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 200px;
+    height: 20px;
+    color: white;
+    font-size: x-small;
+}
+
+.left>span a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-background {
+    position: absolute;
+    top: 45%;
+    width:100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around; /* Only works if there is space left over to justify*/
+    align-items: center;
+    background-color: rgb(240, 248, 255, 0.4);
+}
+
+.logo-background img {
+    flex: 1;
+    max-width: 100px; /* Max-width necessary so justify-content can work*/
+    height: 100%;
+}
+
+.logo-background span {
+    flex: 1;
+    max-width: 200px; /* Max-width necessary so justify-content can work*/
+    font-family: 'Redressed', cursive;
+    font-size: 3rem;
 }
 
 .right {
