@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,42 +11,62 @@
         @import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
     </style>
 </head>
+
 <body>
     <div class="left">
         <div class="logo-background">
             <img src="apotheke.svg" alt="pharmacy cross">
             <span>Online Pharmacy</span>
         </div>
-        <span>Photo by <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeremy Bishop</a> on <a href="https://unsplash.com/images/nature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
+        <span>Photo by <a
+                href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jeremy
+                Bishop</a> on <a
+                href="https://unsplash.com/images/nature?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
     </div>
-    
+
     <div class="right">
         <div class="top">
-            Do you need your medication but have trouble heading down to the pharmacy?
-            At the online pharmacy you are in the hands of caring professionals.
-            Sign up now to get started and change your life - for the healthier.
-            (This is not a real service!)
+            <p>
+                Do you need your medication but have trouble heading down to the pharmacy?
+                At the online pharmacy you are in the hands of caring professionals.
+                Sign up <em>now</em> to get started and change your life - for the healthier.
+                (This is not a real service!)
+            </p>
         </div>
         <div class="middle">
-            <form action="#" method="post">
-                <label for="first_name">First Name</label>
-                <input type="text" name="first_name" id="first_name" required>
-                <label for="last_name">Last Name</label>
-                <input type="text" name="last_name" id="last_name" required>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone">
-                <label for="password" required>Password</label>
-                <input type="password" name="user_password" id="password">
-                <label for="password_confirm" required>Confirm Password</label>
-                <input type="password" name="user_password_confirm" id="password_confirm">
+            <form id="my-form" action="#" method="post">
+                <div class="caption">Let's get you signed up</div>
+                <div>
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" required>
+                </div>
+                <div>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone">
+                </div>
+                <div>
+                    <label for="password" required>Password</label>
+                    <input type="password" name="user_password" id="password">
+                </div>
+                <div>
+                    <label for="password_confirm" required>Confirm Password</label>
+                    <input type="password" name="user_password_confirm" id="password_confirm">
+                </div>
             </form>
         </div>
         <div class="bottom">
-            <button type="submit">Create Account</button>
+            <button form="my-form" type="submit">Create Account</button>
             <span>Already a member? <a href="#">Sign in</a></span>
         </div>
     </div>
 </body>
+
 </html>

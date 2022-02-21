@@ -1,6 +1,16 @@
+@font-face{
+	font-family: system;
+	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
 :root {
     --right-section-height: 33%;
+    --right-section-padding: 18px;
+    --top-color: #FAEBD7;
+    --middle-color: white;
+    --bottom-color: #FAEBD7;
     font-size: 16px;
+    font-family: system;
 }
 
 body {
@@ -22,7 +32,7 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 200px;
+    width: 100%;
     height: 20px;
     color: white;
     font-size: x-small;
@@ -37,8 +47,9 @@ body {
     position: absolute;
     top: 45%;
     width:100%;
-    height: 100px;
+    height: 150px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around; /* Only works if there is space left over to justify*/
     align-items: center;
     background-color: rgb(240, 248, 255, 0.4);
@@ -46,15 +57,14 @@ body {
 
 .logo-background img {
     flex: 1;
-    max-width: 100px; /* Max-width necessary so justify-content can work*/
-    height: 100%;
+    max-width: 100px /* Max-width necessary so justify-content can work*/
 }
 
 .logo-background span {
     flex: 1;
     max-width: 200px; /* Max-width necessary so justify-content can work*/
     font-family: 'Redressed', cursive;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .right {
@@ -64,16 +74,83 @@ body {
 }
 
 .top {
-    background-color: aquamarine;
+    background-color: var(--top-color);
     height: var(--right-section-height);
+    display: flex;
+    align-items: center;
+    line-height: 1.8;
+    padding: var(--right-section-padding);
 }
 
 .middle {
-    background-color: beige;
+    background-color: var(--middle-color);
     height: var(--right-section-height);
+    overflow: auto;
+    box-shadow: 5px 10px 10px lightgray;
+    z-index: 1;
+    padding: var(--right-section-padding);
+}
+
+/* Make it consistent with the rest of the page */
+button, input {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+form {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+form div {
+    padding-top: 10px;
+    flex-basis: 40%;
+    margin: auto 0;
+}
+
+.caption {
+    flex-basis: 100%;
+    font-size: large;
+    font-weight: bold;
+}
+
+label, input {
+    display: block;
+}
+
+input {
+    padding: 10px 3px;
+    width: 100%;
 }
 
 .bottom {
-    background-color: coral ;
+    background-color: var(--bottom-color) ;
     height: var(--right-section-height);
+    padding: var(--right-section-padding);
+}
+
+button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 3px;
+    background-color: #268080;
+    box-shadow: 1px 2px 10px lightgray;
+    display: block;
+    margin: 20px 0 20px 0;
+    color: white;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    .logo-background span {
+       font-size: 3rem;
+    }
 }
