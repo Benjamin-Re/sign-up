@@ -98,6 +98,7 @@ button, input {
   padding: 0;
   margin: 0;
   box-sizing: border-box; 
+  outline: none;
 }
 
 form {
@@ -112,6 +113,7 @@ form {
 form div {
     padding-top: 10px;
     flex-basis: 40%;
+    min-width: 200px;
     margin: auto 0;
 }
 
@@ -147,6 +149,29 @@ button {
     color: white;
 }
 
+input:focus {
+    border: 3px solid lightgray;
+    border-radius: 5px;
+}
+
+.requirement {
+    opacity: 0;
+}
+
+input:not(:placeholder-shown):invalid {
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+input:not(:placeholder-shown):valid{
+    border: 3px solid #268080;
+    border-radius: 5px;
+}
+
+[class$="Requirement"]{
+    color: red;
+    font-size: 12px;
+}
 
 
 @media screen and (min-width: 1000px) {

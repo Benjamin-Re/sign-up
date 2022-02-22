@@ -30,35 +30,39 @@
                 Do you need your medication but have trouble heading down to the pharmacy?
                 At the online pharmacy you are in the hands of caring professionals.
                 Sign up <em>now</em> to get started and change your life - for the healthier.
-                (This is not a real service!)
+                (This is not a real service!) Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab adipisci neque earum reprehenderit harum, nihil in corrupti vel, quas eligendi unde modi excepturi voluptatem beatae aliquam? Quaerat molestias delectus cupiditate.
             </p>
         </div>
         <div class="middle">
             <form id="my-form" action="#" method="post">
                 <div class="caption">Let's get you signed up</div>
                 <div>
-                    <label for="first_name">First Name</label>
-                    <input type="text" name="first_name" id="first_name" required>
+                    <label for="first_name">First Name*</label>
+                    <input maxlength="10" type="text" name="first_name" id="first_name" placeholder=" " required>
                 </div>
                 <div>
-                    <label for="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name" required>
+                    <label for="last_name">Last Name*</label>
+                    <input maxlength="10" type="text" name="last_name" id="last_name" placeholder=" " required>
                 </div>
                 <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email*</label>
+                    <input maxlength="10" type="email" name="email" id="email" placeholder=" " required>
+                    <div class="emailRequirement"></div>
                 </div>
                 <div>
                     <label for="phone">Phone Number</label>
-                    <input type="tel" name="phone" id="phone">
+                    <input minlength="9" maxlength="12" type="tel" name="phone" id="phone" placeholder=" " pattern="[0-9]{9,}">
+                    <div class="phoneRequirement"></div>
                 </div>
                 <div>
-                    <label for="password" required>Password</label>
-                    <input type="password" name="user_password" id="password">
+                    <label for="password" >Password*</label>
+                    <input minlength="8" maxlength="15" type="password" name="user_password" id="password" placeholder=" " required>
+                    <div class="pwRequirement"></div>
                 </div>
                 <div>
-                    <label for="password_confirm" required>Confirm Password</label>
-                    <input type="password" name="user_password_confirm" id="password_confirm">
+                    <label for="password_confirm" >Confirm Password*</label>
+                    <input minlength="8" maxlength="15" type="password" name="user_password_confirm" id="password_confirm" placeholder=" " required>
+                    <div class="pwMatchRequirement"></div>
                 </div>
             </form>
         </div>
@@ -67,6 +71,20 @@
             <span>Already a member? <a href="#">Sign in</a></span>
         </div>
     </div>
+    <script>
+        const emailRequirementText = document.querySelector(".emailRequirement");
+        const emailField = document.querySelector("input[type='email']");
+        let reg = /^([a-z\d\.]+)@([a-z\d\.]+)/;
+        emailField.addEventListener("keyup", (event) => {
+           if(reg.test(emailField.value)){
+                emailRequirementText.textContent = "";
+           } else {
+                emailRequirementText.textContent = "Must contain @";
+           }
+        });
+        
+
+    </script>
 </body>
 
 </html>
