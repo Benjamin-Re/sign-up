@@ -103,8 +103,10 @@
               name="user_password"
               id="password"
               placeholder=" "
+              pattern="(?=.*[A-Z]).{8,}"
               required
             />
+
             <div class="pwRequirement"></div>
           </div>
           <div>
@@ -116,6 +118,7 @@
               name="user_password_confirm"
               id="password_confirm"
               placeholder=" "
+              pattern="(?=.*[A-Z]).{8,}"
               required
             />
             <div class="pwMatchRequirement"></div>
@@ -136,8 +139,14 @@
       let phoneReg = /^[0-9]{9,}/;
       let pwReg1 = /.{8,}/;
       let pwReg2 = /(?=.*[A-Z])/;
-      // let pwReg3 = /?=.*\d/;
 
+      const regex = {
+        emailReg: /^([a-z\d\.]+)@([a-z\d\.]+)/,
+        phoneReg: /^[0-9]{9,}/,
+        pwReg1: /.{8,}/,
+        pwReg2: /(?=.*[A-Z])/
+        // pwReg3 = /(?=.*\d)/;
+      }
 
       const fields = document.querySelectorAll("input");
       const emailRequirementText = document.querySelector(".emailRequirement");
@@ -145,6 +154,8 @@
       const pwRequirementText = document.querySelector(".pwRequirement");
       const pwMatchRequirementText = document.querySelector(".pwMatchRequirement");
       let password = "";
+      let password_confirm = document.querySelector("#password_confirm");
+      const btn = document.querySelector("button");
 
       fields.forEach((field) => {
         field.addEventListener("keyup", function(){
@@ -154,39 +165,47 @@
 
       function eventHandler(field){
         if(field.id === "email"){
-          if(emailReg.test(field.value)){
+          if(regex.emailReg.test(field.value)){
             emailRequirementText.textContent="";
           } else {
             emailRequirementText.textContent="Email address needs a @";
           }
         } else if (field.id === "phone") {
-          if(phoneReg.test(field.value)){
+          if(regex.phoneReg.test(field.value)){
             phoneRequirementText.textContent="";
           } else {
             phoneRequirementText.textContent="Must consist of 9 digits or more";
           }
         } else if (field.id === "password") {
-           if(!pwReg1.test(field.value)){
+          password = field.value;
+           if(!regex.pwReg1.test(field.value)){
              pwRequirementText.textContent="Must be at least 8 characters long";
            }
-           if(!pwReg2.test(field.value)){
+           if(!regex.pwReg2.test(field.value)){
              pwRequirementText.textContent="Must contain at least one upper case letter.";
            }
-           if((!pwReg1.test(field.value))&&(!pwReg2.test(field.value))){
+           if((!regex.pwReg1.test(field.value))&&(!regex.pwReg2.test(field.value))){
             pwRequirementText.textContent="Must be at least 8 characters long, \n Must contain at least one upper case letter.";
            }
-           if((pwReg1.test(field.value))&&(pwReg2.test(field.value))){
+           if((regex.pwReg1.test(field.value))&&(regex.pwReg2.test(field.value))){
              pwRequirementText.textContent="";
-             password = field.value;
            }
+           pwCompare(password, password_confirm);
+
         } else if (field.id === "password_confirm"){
-          if(field.value != password){
+          password_confirm = field.value;
+          pwCompare(password, password_confirm);
+        }    
+      }
+
+      function pwCompare(p1, p2){
+        if(p1 != p2){
             pwMatchRequirementText.textContent="Passwords do not match!";
+            btn.disabled=true;
           } else {
             pwMatchRequirementText.textContent="";
+            btn.disabled=false;
           }
-
-        }    
       }
 
     </script>

@@ -12,7 +12,9 @@
             - [ ] At least one number
             - [x] At least 8 chars
             - [x] PWs must match
-            - [ ] Put regex expressions in object
+            - [x] Put regex expressions in object
+            - [x] PW pattern must match the visual 
+            - [x] Prevent submit if passwords don't coincide
         - [ ] Keep form>divs aligned in case of explanatory text below
 - [x] Add more text to first p
 - [x] Phone number & Confirm pw push input fields down in mobile view
