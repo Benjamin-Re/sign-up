@@ -6,12 +6,14 @@
     - [ ] add :invalid styles
         - [x] add borders showing invalid state (but not right away)
         - [x] email text
-        - [ ] phone text
-        - [ ] password 
-            - [ ] At least one upper
+        - [x] phone text
+        - [x] password 
+            - [x] At least one upper
             - [ ] At least one number
-            - [ ] At least 8 chars
-            - [ ] PWs must match
+            - [x] At least 8 chars
+            - [x] PWs must match
+            - [ ] Put regex expressions in object
+        - [ ] Keep form>divs aligned in case of explanatory text below
 - [x] Add more text to first p
 - [x] Phone number & Confirm pw push input fields down in mobile view
 - [ ] In mobile view the image must go on top
